@@ -23,7 +23,12 @@
     * ol = ordered list, ul = unordered list, li = list item.
     * button = A button. Used in conjunction with JS.
     * img = An image. Use to load images to a page. Can also use css for this, but css images are more designed for use as background images. IMG tags are more for content relevant to text.
+      * <\img src="www.randomimage.com/100/100" alt="a random image"/>
+      * Without the \, each image tag will look like this, with a source referring to the image link and an alt that displays when the image cannot be (for accessibility, for example).
     * textarea = More text than an input tag.
     * form = For gathering data from users. Like a survey. A collection of input, textarea, and select tags.
     * table = Like excel. tr = table row. td = a cell in the table.
+      * Think of td's as columns. Each td you add to a given tr adds another column to the row.
+        * Though, I guess this would not be the case if you had rows that had different amounts of td's.
+      * Was used to layout websites back in the day. Nowadays, you probably only want it to display something you'd display in excel.
     * And many more!
