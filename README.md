@@ -32,3 +32,11 @@
         * Though, I guess this would not be the case if you had rows that had different amounts of td's.
       * Was used to layout websites back in the day. Nowadays, you probably only want it to display something you'd display in excel.
     * And many more!
+  * Attributes - Basically, subvalues you can add to a tag that allow you to do a bit more with the default tags.
+    * Input `type`:
+    * Classes:
+      * Can go on any tag. Does nothing by itself.
+      * Basically, you add a class to a tag to identify it later with CSS or JS.
+    * ID's:
+      * Way less useful than a Class.
+      * Where we can reuse a class, recycling that code over and over, with ID's we are saying that this tag is unique.
