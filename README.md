@@ -13,21 +13,21 @@
 * Tags - a building block. Describes what is inside of it.
   * Using best practices for tags is especially useful for accessibility on your websites.
   * Types:
-    * hx (h1, h2, ...) = Heading.
-    * p = Paragraph.
-    * input = open box for text inputs. Self-closing tag.
-    * a = Anchor. A link to somewhere else. <a href="www.github.com/s1dequest">My Profile</a>
-    * div = Division. Like a cardboard box - defined by what is inside of it. A generic container for grouping other things.
+    * `hx` (h1, h2, ...) = Heading.
+    * `p` = Paragraph.
+    * `input` = open box for text inputs. Self-closing tag.
+    * `a` = Anchor. A link to somewhere else. <a href="https://www.github.com/s1dequest">My Profile</a>
+    * `div` = Division. Like a cardboard box - defined by what is inside of it. A generic container for grouping other things.
       * Example: A blog would have each post in its own div.
-    * span = A container for small bits of text. A ziplock bag. With CSS this division allows us to make the span text different than the rest.
-    * ol = ordered list, ul = unordered list, li = list item.
-    * button = A button. Used in conjunction with JS.
-    * img = An image. Use to load images to a page. Can also use css for this, but css images are more designed for use as background images. IMG tags are more for content relevant to text.
-      * <\img src="www.randomimage.com/100/100" alt="a random image"/>
-      * Without the \, each image tag will look like this, with a source referring to the image link and an alt that displays when the image cannot be (for accessibility, for example).
-    * textarea = More text than an input tag.
-    * form = For gathering data from users. Like a survey. A collection of input, textarea, and select tags.
-    * table = Like excel. tr = table row. td = a cell in the table.
+    * `span` = A container for small bits of text. A ziplock bag. With CSS this division allows us to make the span text different than the rest.
+    * `ol` = ordered list, ul = unordered list, li = list item.
+    * `button` = A button. Used in conjunction with JS.
+    * `img` = An image. Use to load images to a page. Can also use css for this, but css images are more designed for use as background images. IMG tags are more for content relevant to text.
+      * `<img src="www.randomimage.com/100/100" alt="a random image"/>`
+      * Each image tag will look like this, with a source referring to the image link and an alt that displays when the image cannot be (for accessibility, for example).
+    * `textarea` = More text than an input tag.
+    * `form` = For gathering data from users. Like a survey. A collection of input, textarea, and select tags.
+    * `table` = Like excel. tr = table row. td = a cell in the table.
       * Think of td's as columns. Each td you add to a given tr adds another column to the row.
         * Though, I guess this would not be the case if you had rows that had different amounts of td's.
       * Was used to layout websites back in the day. Nowadays, you probably only want it to display something you'd display in excel.
