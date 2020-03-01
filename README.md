@@ -34,6 +34,7 @@
     * And many more!
   * Attributes - Basically, subvalues you can add to a tag that allow you to do a bit more with the default tags.
     * Input `type`:
+      * `<input type="checkbox" />`
     * Classes:
       * Can go on any tag. Does nothing by itself.
       * Basically, you add a class to a tag to identify it later with CSS or JS.

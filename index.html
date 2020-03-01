@@ -41,12 +41,15 @@
 <div>
   <input /> <!-- with a trailing slash -->
   <input> <!-- without a trailing slash; it's the same thing -->
-  <input type="color" />
+  <input type="color" value="##FF0000" />
   <input type="file" />
   <input type="number" />
   <input type="datetime-local" />
-  <input type="radio" />
-  <input type="checkbox" />
+  <input type="radio" unchecked />
+  <input type="checkbox" checked />
+  <input type="checkbox" disabled checked />
+  <input value="Some prefilled value." />
+  <input placeholder="Some placeholder text" /> 
 </div>
 
 <!-- textarea -->
