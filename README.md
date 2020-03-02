@@ -38,6 +38,34 @@
     * Classes:
       * Can go on any tag. Does nothing by itself.
       * Basically, you add a class to a tag to identify it later with CSS or JS.
+      * Useful for CSS. Ex: Apply a class name of 'blog' to all divs containing blogs. Then, we can identify the class and apply CSS rules to _only_ that class.
+      * **divs can (and often should) have multiple classes.**
     * ID's:
       * Way less useful than a Class.
       * Where we can reuse a class, recycling that code over and over, with ID's we are saying that this tag is unique.
+    * Note: Name things semantically; name them about what they _DO_, not what they look like.
+    * Use kebab-case, as HTML is not case sensitive.
+* Meta HTML (doesn't produce visual things)
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Some Title</title>
+  </head>
+  <body>
+    <h1>A Header</h1>
+    <!--- Some Great HTML --->
+  </body>
+</html>
+```
+  * DOCTYPE - declare html or version of html. Always just use html.
+  * html tag - everything goes in here, beginning and end of doc
+  * lang attribute - let the browser know its an english doc
+  * head - all the meta info about your document. The title shown on a google result/tab/etc.
+    * can also add things like viewport which allows you to shrink the page to fit on mobile.
+    * css links
+    * anything not shown to the user but used to configure the website.
+  * body - stuff people _DO_ see.
+  * script - for JS => how you link javascript files to your html.
+  * style - for CSS => not typically used in html, generally in the css.
+  * link - for CSS => how you bring in all your css.
