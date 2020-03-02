@@ -33,8 +33,12 @@
       * Was used to layout websites back in the day. Nowadays, you probably only want it to display something you'd display in excel.
     * And many more!
   * Attributes - Basically, subvalues you can add to a tag that allow you to do a bit more with the default tags.
-    * Input `type`:
-      * `<input type="checkbox" />`
+    * Inputs:
+      * `type="checkbox"`
+      * `type="color"`
+      * `type="file"`
+      * `value`
+      * `placeholder`
     * Classes:
       * Can go on any tag. Does nothing by itself.
       * Basically, you add a class to a tag to identify it later with CSS or JS.
