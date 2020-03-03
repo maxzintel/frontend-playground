@@ -1,7 +1,6 @@
-## HTML Fundamentals and Practice.
+## Frontend Fundamentals and Practice.
 
-### Notes:
-#### Intro:
+#### HTML Intro:
 * **HTML = The Structure.** Contains text, images tied to the text, and, in general, groups things together.
 * **CSS = The Blueprint.** The rules of what goes where, the colors, sizes, fonts, backgrounds, etc...
   * Like HTML, it doesn't actually _do_ anything, it is just a set of rules to determine how things work/look.
@@ -73,3 +72,21 @@
   * script - for JS => how you link javascript files to your html.
   * style - for CSS => not typically used in html, generally in the css.
   * link - for CSS => how you bring in all your css.
+
+### CSS (Cascading Style Sheets):
+What if you want your html headers to look different? Let's say you want them to be red.
+* Spoiler alert: you do that with css, by creating rules that dictate how the html is displayed.
+```css
+h1 {
+  color: limegreen;
+  font-size: 60px;
+  font-weight: normal;
+  text-decoration: underline;
+  text-transform: uppercase;
+  border: 3px solid pink;
+}
+```
+* `h1` = the **selector**. Every h1 on the page, apply every rule within the curly braces.
+* `color` = a **property**. There are a bunch of properties you can use. You won't use most properties.
+* `red` = a **value**. A value that css understands. In this case, it would also understand hex and rgb values.
+* `px` = literal value. `em` is also a measure of size, but it is the relative size based on font. Useful when you may change fonts.
