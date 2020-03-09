@@ -73,7 +73,7 @@
   * style - for CSS => not typically used in html, generally in the css.
   * link - for CSS => how you bring in all your css.
 
-### CSS (Cascading Style Sheets):
+### CSS INTRO (Cascading Style Sheets):
 What if you want your html headers to look different? Let's say you want them to be red.
 * Spoiler alert: you do that with css, by creating rules that dictate how the html is displayed.
 ```css
@@ -157,3 +157,34 @@ h1 {
 }
 ```
   * There are a lot of these. `:focus`, `:active`, `:first-child`, `:last-child`, `:nth-child()`, to name a few.
+  * Wildcard Selector:
+    * `<style> * { font-weight: bold; } </style>`
+      * In this example, everything on our page would become bold.
+
+Note: CSS SpeciFISHity is a great chart for seeing the CSS hierarchy.
+
+### Layout CSS:
+CSS can also be used to layout a page differently (rather than just style it). Without it, you could not have two boxes next to eachother.
+  * Float - the idea is basically to float something left or right in the css for a class (or whatever). If we say float left the class elements will start appearing as far left as possible. Each additional element will appear next to the prior one, just to the right of it (but still as left as the border allows).
+
+  * **The Box Model**: V important. Should invest some time into understanding this a lot.
+    * Display
+      * Every tag in CSS has a `display` property associated with it by default.
+      * `div`, for example, is `display: block` by default. Meaning it will take up all the width it possibly can, but respects height, width, padding, margins. In other words, by default a block will take up the whole line unless otherwise specified.
+      * `span` is `display: inline` by default. It will NOT LET YOU CHANGE height, width, padding, margins. This is a common pitfall. If stuff wont change the way you want, you likely have the wrong `display`.
+      * `inline-block` is a hybrid between the above two. It will make the browser try to place your tag inline, but still allows you to control the height, width, padding and margins of it.
+      * `flex` and `inline-flex` are similar to blocks in that they can affect the tags around it, but gain a new superpower in how its interior tags are laid out.
+      * `grid` and `inline-grid` are more advanced and allow you more power to layout tags inside of them. 
+      * `table` is used to make something actu like a table. In general, we use the `<table></table>` tag instead of using CSS to make things act like tables.
+      * From outside to inside, `margin` (distance between the element and any other elements), `border` (of the actual element), `padding` (distance between border and element content), `interior content`.
+        * Margin = outside element, Padding = inside the element.
+        * Box sizing, border-box is the holy grail. This is what we will use the wildcard selector with. It allows you to set width sizing that includes everything, border, padding, etc...
+          * by default this is not the case.
+```css
+<style>
+  * {
+    box-sizing: border-box;
+  }
+</style>
+```
+^ Don't put anything else in that wildcard styling.
