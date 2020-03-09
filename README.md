@@ -156,4 +156,4 @@ h1 {
   background-color: crimson
 }
 ```
-  * There are a lot of these. `:focus`, `:active`, to name a couple.
+  * There are a lot of these. `:focus`, `:active`, `:first-child`, `:last-child`, `:nth-child()`, to name a few.
