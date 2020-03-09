@@ -90,3 +90,20 @@ h1 {
 * `color` = a **property**. There are a bunch of properties you can use. You won't use most properties.
 * `red` = a **value**. A value that css understands. In this case, it would also understand hex and rgb values.
 * `px` = literal value. `em` is also a measure of size, but it is the relative size based on font. Useful when you may change fonts.
+* **Psuedo Classes:**
+  * Associates CSS rules based on certain special events that happen within the markup or user action.
+  * Ex: If you want the look of something to change upon hovering over it with your mouse, for example...
+```css
+.hover-example {
+  color: limegreen;
+  font-size: 60px;
+  font-weight: normal;
+  text-decoration: underline;
+  text-transform: uppercase;
+  border: 3px solid pink;
+}
+.hover-example:hover {
+  background-color: crimson
+}
+```
+  * There are a lot of these. `:focus`, `:active`, to name a couple.
