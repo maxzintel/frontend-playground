@@ -90,6 +90,56 @@ h1 {
 * `color` = a **property**. There are a bunch of properties you can use. You won't use most properties.
 * `red` = a **value**. A value that css understands. In this case, it would also understand hex and rgb values.
 * `px` = literal value. `em` is also a measure of size, but it is the relative size based on font. Useful when you may change fonts.
+
+*  **The Cascade:**
+  * The Cascade settles potential conflicts between CSS Rules. Maybe you want different paragraphs to be different colors, for example. But setting `p {...}` wouldn't do that because it applies the rules within to all paragraph elements.
+  * Classes!
+```css
+.branding {
+  color: red;
+}
+.blog-post {
+  color: green;
+}
+```
+```html
+<h1 class="branding">This is a red branding header</h1>
+<h1 class="blog-post">This is a green blog post header</h1>
+```
+* Cascade continued...
+  * Period before the selector means class.
+  * Always use classes for styling. The one exception is if you want literally all types of an element to look the same. Think a table of contents that all have anchors. Something like that.
+  * When two things are considered = in css, the one that occurs last (lower on the page) wins.
+* example:
+```css
+.branding {
+  border: 1px solid black;
+  color: red;
+}
+.blog-post {
+  color: green;
+}
+```
+```html
+<h1 class="branding blog-post">I am green AND have a black border.</h1>
+```
+  * In the above, since the color green comes last, it wins. Since the second class has no border though, it keeps the same border as the first class styling declares.
+  * This is called **specificity**.
+  * Styling becomes more **specific** if, for example, it has more than one class attached to the styling.
+```css
+.branding.title-3 {
+  color: red;
+}
+.title-3 {
+  color: green;
+}
+```
+```html
+<h1 class="branding title-3">This is a red branding header</h1>
+```
+  * Classes are also more specific than tags. So in the above example, if we had `h1` styling saying it should be yellow, it would still be red.
+  * **ID's in Cascades:** they are wrecking balls and override like 10 classes. Basically, dont use them 99% of the time. Same with **!important**. Definitely dont use that.
+
 * **Psuedo Classes:**
   * Associates CSS rules based on certain special events that happen within the markup or user action.
   * Ex: If you want the look of something to change upon hovering over it with your mouse, for example...
