@@ -227,27 +227,6 @@ Ex: Basics, without setting things up with floats/flex yet. Below examples will 
   .floated div { /* Space between the two means it is a Descendent. I.E. all the divs inside 'floated' */
     float: left; /* For above, could instead do .floated .box and add the box class below. */
   }
-  .box-1 {
-    border: 1px solid black;
-    color: white;
-    background-color: blue;
-    height: 150px;
-    width: 300px;
-  }
-  .box-2 {
-    border: 1px solid black;
-    color: white;
-    background-color: red;
-    height: 100px;
-    width: 300px;
-  }
-  .box-3 {
-    border: 1px solid black;
-    color: white;
-    background-color: green;
-    height: 200px;
-    width: 100px;
-  }
 </style>
 <div class="floated">
   <div class="box-1">1</div>
@@ -264,29 +243,72 @@ Ex: Basics, without setting things up with floats/flex yet. Below examples will 
     width: 100%;
     border: 1px solid black;
   }
-  .box-1 {
-    border: 1px solid black;
-    color: white;
-    background-color: blue;
-    height: 150px;
-    width: 300px;
-  }
-  .box-2 {
-    border: 1px solid black;
-    color: white;
-    background-color: red;
-    height: 100px;
-    width: 300px;
-  }
-  .box-3 {
-    border: 1px solid black;
-    color: white;
-    background-color: green;
-    height: 200px;
-    width: 100px;
-  }
 </style>
 <div class="flex-container">
+  <div class="box-1">1</div>
+  <div class="box-2">2</div>
+  <div class="box-3">3</div>
+</div>
+```
+**Flex** continued...
+* 3 Properties with Flex! `flex-direction`, `justify-content`, and `align-items`.
+* `flex-direction`: Allows you to reverse the ordering of your row if you'd like.
+  * `row-reverse`, `column-reverse`
+```html
+<style>
+  .flex-container { 
+    display: flex;
+    width: 100%;
+    border: 1px solid black;
+  }
+  .reverse {
+    flex-direction: row-reverse;
+  }
+</style>
+<div class="flex-container reverse">
+  <div class="box-1">1</div>
+  <div class="box-2">2</div>
+  <div class="box-3">3</div>
+</div>
+```
+* `justify-content`: fits your content against the right or left. 
+  * `flex-end` is basically `right`, because it sticks your content to the right side of the view.
+  * `flex-start` is the default and sticks content on the left. 
+  * `flex-center` centers everything such that the space (unoccupied by elements within this parent) on the left and right of the screen is equal.
+  * `space-between` sticks the end elements of a row against the left and right edge and centers any elements within it such that the space between them is equal. More useful than the following few.
+  * `space-around` is similar to the above, but includes space on the left and right of the edge elements. By default the space around the beginning and end is half that of the space between elements themselves.
+  * `space-evenly` is the same as above but the space on the left and right edge is equal to the space between elements.
+  * This is all left/right/center. Not vertical.
+```html
+<style>
+  .flex-container { 
+    display: flex;
+    width: 100%;
+    border: 1px solid black;
+  }
+  .jc-right {
+    justify-content: flex-end;
+  }
+</style>
+<div class="flex-container jc-right">
+  <div class="box-1">1</div>
+  <div class="box-2">2</div>
+  <div class="box-3">3</div>
+</div>
+```
+* `align-items`: The vertical equivalent of `justify-content`.
+```html
+<style>
+  .flex-container { 
+    display: flex;
+    width: 100%;
+    border: 1px solid black;
+  }
+  .al-fe {
+    align-items: flex-end;
+  }
+</style>
+<div class="flex-container al-fe">
   <div class="box-1">1</div>
   <div class="box-2">2</div>
   <div class="box-3">3</div>
