@@ -319,3 +319,6 @@ Ex: Basics, without setting things up with floats/flex yet. Below examples will 
 </div>
 ```
 * You can combine these to great effect. Example: to center everything, vertically and horizontally, you may use both `align-items: flex-center` and `justify-content: space-around`.
+* Other flex properties:
+  * `flex-wrap` makes multiple rows.
+  * Lots of props that the childrenn element can have (everything above is specifically for parents) that can affect stuff, like `order` (orders stuff) and `align-self` (overrides `align-items`)
