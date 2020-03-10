@@ -6,6 +6,7 @@
 
 .brand {
   font-style: italic;
+  font-family: 'Parisienne', cursive;
 }
 
 .row {
@@ -20,6 +21,10 @@
   font-style: italic;
 }
 
+.image {
+  width: 100%;
+}
+
 .quarter {
   width: 25%;
 }
@@ -28,7 +33,7 @@
   width: 50%;
 }
 
-.threequarter {
+.three-quarter {
   width: 75%;
 }
 
@@ -37,21 +42,19 @@
   border: 1px solid grey;
 }
 
-.wrap {
-  flex-wrap: wrap;
-}
-
 .category-box {
-  width: 75%;
   display: flex;
-  padding: 1px;
-  border: 1px solid grey;
-  height: 20%;
+  padding: 0;
+  margin: 0;
+  align-items: stretch;
+  justify-content: center;
   flex-direction: column;
 }
 
-.cat-bo {
-  border: 1px solid grey;
+.site-section {
+  display: flex;
+  flex: 1;
+  align-items: center;
 }
 
 .cat-1 {
@@ -70,7 +73,14 @@
   background-color: whitesmoke;
 }
 
+.site-link {
+  text-decoration: none;
+  font-size: 30px;
+  padding-left: 30px;
+  font-weight: bold;
+  color: darkgray:
+}
+
 * {
   box-sizing: border-box;
-  font-family: 'Times New Roman', Times, serif;
 }
