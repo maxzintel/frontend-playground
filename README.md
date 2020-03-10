@@ -322,3 +322,30 @@ Ex: Basics, without setting things up with floats/flex yet. Below examples will 
 * Other flex properties:
   * `flex-wrap` makes multiple rows.
   * Lots of props that the childrenn element can have (everything above is specifically for parents) that can affect stuff, like `order` (orders stuff) and `align-self` (overrides `align-items`)
+
+### Basic Patterns for Coding in CSS
+* **Connecting CSS and HTML:** (without using `<style>` tags in your html)
+  * Use `<link>` tags in your `head`!
+```html
+<html lang="en">
+<head>
+  <title>foo</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+</html>
+```
+The `rel="stylesheet"` lets the html know this link should be interpreted as CSS. This will always be the same.
+The `href="./style.css"` is where the css stylesheet *is*. `./` means 'in the same folder'. You don't actually need this.
+
+* **When to use the Cascade**:
+  * Strive to not repeat yourself. Whenever many of the properties of various elements are going to be the same, put those into a base class. Then, anything else that needs to be changed for a specific element can just be put in a minimalist class that you add the the element in question. Ex: The color differences between a `WARN` and a `SUCCESS` button.
+
+* **Dev Tools:**
+  * Inspect Element in Firefox and Chrome.
+  * You can actually change css properties (and a bunch of other things) in here for rapid iteration.
+  * Use **Box Model** in computed to visually see and change element spacing/margins/padding/etc...
+  * `CTRL+SHIFT+i` to quickly open and close dev tools.
+  * **Grid Inspector** in Firefox for working in CSS Grid.
+  * **Code Mirror** in Firefox/Chrome.
+  * View your code in various mobile devices, varying connection speeds (good 3G), turn off throttling, etc.
+  * Color dropper to find what color is what.
