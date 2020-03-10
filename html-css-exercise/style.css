@@ -5,30 +5,58 @@
   border: 1px dotted black;
   justify-content: center;
   font-style: italic;
+  margin: 2px;
 }
 
 .std-box {
   display: flex;
   width: 100%;
   height: 50%;
-  border: 3px solid black;
+  border: 2px solid black;
 }
 
 .article-box {
  width: 25%;
- padding: 1%;
+ padding: 2px;
  border: 2px solid rgb(226, 9, 9);
 }
 
 .focus-box {
   width: 50%;
-  padding: 1%;
+  padding: 2px;
   border: 2px solid rgb(6, 153, 19);
+}
+
+
+.wrap {
+  flex-wrap: wrap;
 }
 
 .category-box {
   width: 75%;
-  height: 20%;
-  padding: 1%;
+  display: flex;
+  padding: 1px;
   border: 2px solid blue;
+  height: 20%;
+  flex-direction: column;
+}
+
+.cat-1 {
+  background-color: red;
+}
+.cat-2 {
+  background-color: blueviolet;
+}
+.cat-3 {
+  background-color: green;
+}
+.cat-4 {
+  background-color: orange;
+}
+.cat-5 {
+  background-color: whitesmoke;
+}
+
+* {
+  box-sizing: border-box;
 }
