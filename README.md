@@ -180,7 +180,7 @@ CSS can also be used to layout a page differently (rather than just style it). W
         * Margin = outside element, Padding = inside the element.
         * Box sizing, border-box is the holy grail. This is what we will use the wildcard selector with. It allows you to set width sizing that includes everything, border, padding, etc...
           * by default this is not the case.
-```css
+```html
 <style>
   * {
     box-sizing: border-box;
@@ -188,3 +188,107 @@ CSS can also be used to layout a page differently (rather than just style it). W
 </style>
 ```
 ^ Don't put anything else in that wildcard styling.
+
+### CSS Floats and Flexbox:
+* How to setup elements in relation to eachother.
+Ex: Basics, without setting things up with floats/flex yet. Below examples will depict derivations from this.
+```html
+<style>
+  .box-1 {
+    border: 1px solid black;
+    color: white;
+    background-color: blue;
+    height: 150px;
+    width: 300px;
+  }
+  .box-2 {
+    border: 1px solid black;
+    color: white;
+    background-color: red;
+    height: 100px;
+    width: 300px;
+  }
+  .box-3 {
+    border: 1px solid black;
+    color: white;
+    background-color: green;
+    height: 200px;
+    width: 100px;
+  }
+</style>
+<div class="box-1">1</div>
+<div class="box-2">2</div>
+<div class="box-3">3</div>
+```
+* **Floats!** The old way. Only really use this if for some reason you need to support Windows XP.
+  * The idea is basically to push an element as far right or left as possible. As you add more elements, it will continue to do this next to the prior element until it needs to go onto a new line. 
+```html
+<style>
+  .floated div { /* Space between the two means it is a Descendent. I.E. all the divs inside 'floated' */
+    float: left; /* For above, could instead do .floated .box and add the box class below. */
+  }
+  .box-1 {
+    border: 1px solid black;
+    color: white;
+    background-color: blue;
+    height: 150px;
+    width: 300px;
+  }
+  .box-2 {
+    border: 1px solid black;
+    color: white;
+    background-color: red;
+    height: 100px;
+    width: 300px;
+  }
+  .box-3 {
+    border: 1px solid black;
+    color: white;
+    background-color: green;
+    height: 200px;
+    width: 100px;
+  }
+</style>
+<div class="floated">
+  <div class="box-1">1</div>
+  <div class="box-2">2</div>
+  <div class="box-3">3</div>
+</div>
+```
+* **Flex!** A display mode for css `display: flex;`. Above, we needed to tell float to act on all `div` or `class="box"` under the class `floated`. With flex this is not the case. When using `display: flex` on a parent container, it automatically applies to everything inside of it.
+  * Will not wrap unless specified. It will squish the boxes proportionally to fit on one line.
+```html
+<style>
+  .flex-container { 
+    display: flex;
+    width: 100%;
+    border: 1px solid black;
+  }
+  .box-1 {
+    border: 1px solid black;
+    color: white;
+    background-color: blue;
+    height: 150px;
+    width: 300px;
+  }
+  .box-2 {
+    border: 1px solid black;
+    color: white;
+    background-color: red;
+    height: 100px;
+    width: 300px;
+  }
+  .box-3 {
+    border: 1px solid black;
+    color: white;
+    background-color: green;
+    height: 200px;
+    width: 100px;
+  }
+</style>
+<div class="flex-container">
+  <div class="box-1">1</div>
+  <div class="box-2">2</div>
+  <div class="box-3">3</div>
+</div>
+```
