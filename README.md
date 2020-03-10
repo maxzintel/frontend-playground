@@ -256,11 +256,6 @@ Ex: Basics, without setting things up with floats/flex yet. Below examples will 
   * `row-reverse`, `column-reverse`
 ```html
 <style>
-  .flex-container { 
-    display: flex;
-    width: 100%;
-    border: 1px solid black;
-  }
   .reverse {
     flex-direction: row-reverse;
   }
@@ -281,11 +276,6 @@ Ex: Basics, without setting things up with floats/flex yet. Below examples will 
   * This is all left/right/center. Not vertical.
 ```html
 <style>
-  .flex-container { 
-    display: flex;
-    width: 100%;
-    border: 1px solid black;
-  }
   .jc-right {
     justify-content: flex-end;
   }
@@ -297,15 +287,13 @@ Ex: Basics, without setting things up with floats/flex yet. Below examples will 
 </div>
 ```
 * `align-items`: The vertical equivalent of `justify-content`.
+  * `flex-end` sticks elements to the bottom.
+  * `stretch` is a new one. Respects height, so we want to remove height if we want the results extended all the way top-bottom. Stretches out to fit the size of the `div`.
 ```html
 <style>
-  .flex-container { 
-    display: flex;
-    width: 100%;
-    border: 1px solid black;
-  }
   .al-fe {
     align-items: flex-end;
+    padding-top: 20px;
   }
 </style>
 <div class="flex-container al-fe">
@@ -314,3 +302,20 @@ Ex: Basics, without setting things up with floats/flex yet. Below examples will 
   <div class="box-3">3</div>
 </div>
 ```
+```html Stretch example
+<style>
+  .al-stretch {
+    align-items: stretch;
+    height: 200px;
+  }
+  .no-height {
+    height: inherit; /* This will set any element with this class to inherit the height spec from its parent */
+  } /* Generally you just would not set the height for the boxes to begin with. */
+</style>
+<div class="flex-container al-stretch">
+  <div class="box-1 no-height">1</div>
+  <div class="box-2 no-height">2</div>
+  <div class="box-3 no-height">3</div>
+</div>
+```
+* You can combine these to great effect. Example: to center everything, vertically and horizontally, you may use both `align-items: flex-center` and `justify-content: space-around`.
