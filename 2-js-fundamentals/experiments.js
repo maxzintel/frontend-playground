@@ -1,4 +1,9 @@
-const monthlyRent = 500;
+const name = 'Max';
 
-const yearlyRent = monthlyRent * 12;
-console.log(yearlyRent);
+// Below two examples produce the same output.
+const sentence = "Hello " + name + ". " + "How are you?";
+const sentenceTemplate = `Hello ${name}. How are you?`; // Use template strings instead! Newer. More fun. Exciting.
+// Need the backticks here.
+
+console.log(sentence);
+console.log(sentenceTemplate);

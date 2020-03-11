@@ -355,3 +355,18 @@ Mostly Review, but will take notes on the important bits.
 
 * JS is single-threaded. Meaning, only one thing is every happening at a time. It executes one line of code at at time.
 * Use camel-casing in JS.
+* Control Flow
+  * This is basically Conditional `if` statements. Sometimes you only want to run code if certain conditions are true.
+  * Whatever is in the `()` in the `if (x) {...}` needs to evaluate to either true or false.
+  * `=` 'is assigned'.
+  * `==` 'is x equal to y'. **NEVER USE**. Does 'coercion', which tries to make strings/numbers work as equals.
+  * `===` 'is x equal to y'. **ALWAYS USE**. If x and y are not the same type AND the same value, this is false.
+  * `!==` 'is x not equal to y'. **ALWAYS USE**.
+```javascript
+const skyBlue = true;
+if (skyBlue) {
+  console.log('the sky is blue');
+} else {
+  console.log('the sky is not blue.');
+}
+```
