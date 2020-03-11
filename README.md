@@ -1,13 +1,13 @@
-## Frontend Fundamentals and Practice.
+# Frontend Fundamentals and Practice.
 
-#### HTML Intro:
+## HTML Intro:
 * **HTML = The Structure.** Contains text, images tied to the text, and, in general, groups things together.
 * **CSS = The Blueprint.** The rules of what goes where, the colors, sizes, fonts, backgrounds, etc...
   * Like HTML, it doesn't actually _do_ anything, it is just a set of rules to determine how things work/look.
 * **Frontend/Client Javascript = The Smart Home.** Pre-programmed stuff you can tell your house to do.
 * **Backend Javascript = The Pizza Place.** Where we can request things and get what we ask for.
 
-#### HTML:
+## HTML:
 * Static, like an essay.
 * Tags - a building block. Describes what is inside of it.
   * Using best practices for tags is especially useful for accessibility on your websites.
@@ -73,7 +73,7 @@
   * style - for CSS => not typically used in html, generally in the css.
   * link - for CSS => how you bring in all your css.
 
-### CSS INTRO (Cascading Style Sheets):
+## CSS INTRO (Cascading Style Sheets):
 What if you want your html headers to look different? Let's say you want them to be red.
 * Spoiler alert: you do that with css, by creating rules that dictate how the html is displayed.
 ```css
@@ -174,7 +174,7 @@ CSS can also be used to layout a page differently (rather than just style it). W
       * `span` is `display: inline` by default. It will NOT LET YOU CHANGE height, width, padding, margins. This is a common pitfall. If stuff wont change the way you want, you likely have the wrong `display`.
       * `inline-block` is a hybrid between the above two. It will make the browser try to place your tag inline, but still allows you to control the height, width, padding and margins of it.
       * `flex` and `inline-flex` are similar to blocks in that they can affect the tags around it, but gain a new superpower in how its interior tags are laid out.
-      * `grid` and `inline-grid` are more advanced and allow you more power to layout tags inside of them. 
+      * `grid` and `inline-grid` are more advanced and allow you more power to layout tags inside of them.
       * `table` is used to make something actu like a table. In general, we use the `<table></table>` tag instead of using CSS to make things act like tables.
       * From outside to inside, `margin` (distance between the element and any other elements), `border` (of the actual element), `padding` (distance between border and element content), `interior content`.
         * Margin = outside element, Padding = inside the element.
@@ -221,7 +221,7 @@ Ex: Basics, without setting things up with floats/flex yet. Below examples will 
 <div class="box-3">3</div>
 ```
 * **Floats!** The old way. Only really use this if for some reason you need to support Windows XP.
-  * The idea is basically to push an element as far right or left as possible. As you add more elements, it will continue to do this next to the prior element until it needs to go onto a new line. 
+  * The idea is basically to push an element as far right or left as possible. As you add more elements, it will continue to do this next to the prior element until it needs to go onto a new line.
 ```html
 <style>
   .floated div { /* Space between the two means it is a Descendent. I.E. all the divs inside 'floated' */
@@ -238,7 +238,7 @@ Ex: Basics, without setting things up with floats/flex yet. Below examples will 
   * Will not wrap unless specified. It will squish the boxes proportionally to fit on one line.
 ```html
 <style>
-  .flex-container { 
+  .flex-container {
     display: flex;
     width: 100%;
     border: 1px solid black;
@@ -266,9 +266,9 @@ Ex: Basics, without setting things up with floats/flex yet. Below examples will 
   <div class="box-3">3</div>
 </div>
 ```
-* `justify-content`: fits your content against the right or left. 
+* `justify-content`: fits your content against the right or left.
   * `flex-end` is basically `right`, because it sticks your content to the right side of the view.
-  * `flex-start` is the default and sticks content on the left. 
+  * `flex-start` is the default and sticks content on the left.
   * `flex-center` centers everything such that the space (unoccupied by elements within this parent) on the left and right of the screen is equal.
   * `space-between` sticks the end elements of a row against the left and right edge and centers any elements within it such that the space between them is equal. More useful than the following few.
   * `space-around` is similar to the above, but includes space on the left and right of the edge elements. By default the space around the beginning and end is half that of the space between elements themselves.
@@ -349,3 +349,9 @@ The `href="./style.css"` is where the css stylesheet *is*. `./` means 'in the sa
   * **Code Mirror** in Firefox/Chrome.
   * View your code in various mobile devices, varying connection speeds (good 3G), turn off throttling, etc.
   * Color dropper to find what color is what.
+
+## Javascript!
+Mostly Review, but will take notes on the important bits.
+
+* JS is single-threaded. Meaning, only one thing is every happening at a time. It executes one line of code at at time.
+* Use camel-casing in JS.
