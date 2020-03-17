@@ -371,7 +371,7 @@ if (skyBlue) {
 }
 ```
 
-* Loops:
+* **Loops:**
   * Use `let` for things you want to change. Not `var`, cuz its old, and not `const`, cuz that is a constant.
 ```js
 let friends = 0;
@@ -380,10 +380,10 @@ while (friends < 10) {
 }
 console.log(friends)
 ```
- * Types: `if`, `while`, `do`, `for`
-  * Only difference between `while` and `do` is that `do` runs AT LEAST once, whereas `while` doesn't need to run.
-* `**=` is the unary operator for exponent. `5 ** 2` would be 'five squared'.
-* **for loops**! They are important. `if`, `for`, and `while` are easily the most frequently used of the 4, but `for` is the most common of all of them. Example `for` loop below.
+  * Types: `if`, `while`, `do`, `for`
+    * Only difference between `while` and `do` is that `do` runs AT LEAST once, whereas `while` doesn't need to run.
+  * `**=` is the unary operator for exponent. `5 ** 2` would be 'five squared'.
+  * **for loops**! They are important. `if`, `for`, and `while` are easily the most frequently used of the 4, but `for` is the most common of all of them. Example `for` loop below.
 ```js
 let friends = 0;
 for (let i = 0; i <= 10; i++) {
@@ -395,3 +395,23 @@ console.log(friends);
     * 1. The Control Variable `(let i = 0;...)`: It's always `i`, arbitrarily. Subsequent loops are named after the subsequent letters in the alphabet. Generally you do not want to get past 'k'.
     * 2. The Condition `(...i <= 10;...)`
     * 3. What to do at the 'End' of every Loop `(...i++)`
+
+* **Functions**:
+  * Basically useful for any code that will be reused. Example:
+```js
+function addTwo(number) { // Name = addTwo. Parameter = number.
+  return number + 2; // Returns 'number' with 2 added to it.
+}
+
+const answer = addTwo(5) // upon invocation, specify the value number starts at.
+console.log(answer)
+```
+```js
+function greet(fn, ln, honorific, greeting) {
+  return `${greeting} ${honorific} ${ln}. I am pleased you could join us. Enjoy your stay ${fn}.`
+}
+
+console.log(greet("Macks","Zin","Dowager Count","Aloha"))
+```
+  * Function names are generally verbs, and parameter names are generally nouns.
+  * If functions have no parameters to add, invoke them via `addTwo()` (empty paranthesis).
