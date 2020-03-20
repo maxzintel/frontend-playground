@@ -415,3 +415,9 @@ console.log(greet("Macks","Zin","Dowager Count","Aloha"))
 ```
   * Function names are generally verbs, and parameter names are generally nouns.
   * If functions have no parameters to add, invoke them via `addTwo()` (empty paranthesis).
+
+* **Scope**:
+  * Every time you call a function, it has its own scope. Other things cannot peek into it, it has its own lil workspace to hangout in. Once the function is done, any var you have not explicitly held on to is gone!
+  * Stuff from the global scope can be used within functions/anywhere else in the file. Generally, you do not want many things at the global scope.
+  * Note: this also applies to functions within functions, though that is something you generally do not want to do.
+  * `Reference Error` is the big indicator of scope errors.
