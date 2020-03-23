@@ -549,3 +549,54 @@ cities.forEach(function(city) { // city is a parameter of cities.
   console.log(city);
 })
 ```
+
+* **Document Object Model (the DOM)**:
+  * The DOM is how javascript interacts with html and css.
+  * Websites generally follow the order of operations below:
+    * Write code and put it on a server somewhere.
+    * The client's browser makes a request to your server for your index.html
+    * Your server sends them a copy of it.
+    * The browser reads the html and sees you have a `script.js` script tag in there.
+    * Browsers make another request for the `script.js` file.
+    * Your server sends them a copy of the script.
+    * The browser reads and begins executing the code.
+  * Example:
+```html
+<!-- Note: normally we separate <style> and <script> tags into separate css and js files. -->
+<style>
+  .red-square {
+    width: 100px;
+    height: 100px;
+    background-color: crimson;
+  }
+</style>
+
+<div class="red-square"></div>
+
+<script>
+  const redSquare = document.querySelector('.red-square');
+  redSquare.style.backgroundColor = 'limegreen';
+</script>
+```
+  * So what did we do here?
+    * We called a method on `document` => a globally available var in the browser that you use to interact with the html and css. It has a bunch of built in methods.
+    * For `document.querySelector` we pass in a css selector and it returns to you the *first* one that matches the selector that it finds.
+    * Once we identified the html tag element `div.red-square`, we use `.style` to interact with the css styling, and set the `backgroundColor` (note: camelCase).
+  * What if we wanted to change a bunch of  elements at once?
+```html
+<ul>
+  <li class="target">Max</li>
+  <li class="target">Carrie</li>
+  <li>Milo</li>
+  <li class="target">Shanti</li>
+  <li>Alpha Goat</li>
+</ul>
+
+<script>
+  const elementsToChange = document.querySelectorAll('.target');
+  for (let i = 0; i < elementsToChange.length; i++) {
+    const currentEl = elementsToChange[i];
+    currentEl.innerText = "ASDADS"
+  }
+</script>
+```
