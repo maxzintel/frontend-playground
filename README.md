@@ -220,7 +220,8 @@ Ex: Basics, without setting things up with floats/flex yet. Below examples will 
 <div class="box-2">2</div>
 <div class="box-3">3</div>
 ```
-* **Floats!** The old way. Only really use this if for some reason you need to support Windows XP.
+#### Floats! 
+* The old way. Only really use this if for some reason you need to support Windows XP.
   * The idea is basically to push an element as far right or left as possible. As you add more elements, it will continue to do this next to the prior element until it needs to go onto a new line.
 ```html
 <style>
@@ -234,7 +235,8 @@ Ex: Basics, without setting things up with floats/flex yet. Below examples will 
   <div class="box-3">3</div>
 </div>
 ```
-* **Flex!** A display mode for css `display: flex;`. Above, we needed to tell float to act on all `div` or `class="box"` under the class `floated`. With flex this is not the case. When using `display: flex` on a parent container, it automatically applies to everything inside of it.
+#### Flex! 
+* A display mode for css `display: flex;`. Above, we needed to tell float to act on all `div` or `class="box"` under the class `floated`. With flex this is not the case. When using `display: flex` on a parent container, it automatically applies to everything inside of it.
   * Will not wrap unless specified. It will squish the boxes proportionally to fit on one line.
 ```html
 <style>
@@ -324,7 +326,7 @@ Ex: Basics, without setting things up with floats/flex yet. Below examples will 
   * Lots of props that the childrenn element can have (everything above is specifically for parents) that can affect stuff, like `order` (orders stuff) and `align-self` (overrides `align-items`)
 
 ### Basic Patterns for Coding in CSS
-* **Connecting CSS and HTML:** (without using `<style>` tags in your html)
+#### Connecting CSS and HTML: (without using `<style>` tags in your html)
   * Use `<link>` tags in your `head`!
 ```html
 <html lang="en">
@@ -337,10 +339,10 @@ Ex: Basics, without setting things up with floats/flex yet. Below examples will 
 The `rel="stylesheet"` lets the html know this link should be interpreted as CSS. This will always be the same.
 The `href="./style.css"` is where the css stylesheet *is*. `./` means 'in the same folder'. You don't actually need this.
 
-* **When to use the Cascade**:
+#### When to use the Cascade:
   * Strive to not repeat yourself. Whenever many of the properties of various elements are going to be the same, put those into a base class. Then, anything else that needs to be changed for a specific element can just be put in a minimalist class that you add the the element in question. Ex: The color differences between a `WARN` and a `SUCCESS` button.
 
-* **Dev Tools:**
+#### Dev Tools:
   * Inspect Element in Firefox and Chrome.
   * You can actually change css properties (and a bunch of other things) in here for rapid iteration.
   * Use **Box Model** in computed to visually see and change element spacing/margins/padding/etc...
@@ -371,7 +373,7 @@ if (skyBlue) {
 }
 ```
 
-* **Loops:**
+#### Loops:
   * Use `let` for things you want to change. Not `var`, cuz its old, and not `const`, cuz that is a constant.
 ```js
 let friends = 0;
@@ -396,7 +398,7 @@ console.log(friends);
     * 2. The Condition `(...i <= 10;...)`
     * 3. What to do at the 'End' of every Loop `(...i++)`
 
-* **Functions**:
+#### Functions:
   * Basically useful for any code that will be reused. Example:
 ```js
 function addTwo(number) { // Name = addTwo. Parameter = number.
@@ -416,13 +418,13 @@ console.log(greet("Macks","Zin","Dowager Count","Aloha"))
   * Function names are generally verbs, and parameter names are generally nouns.
   * If functions have no parameters to add, invoke them via `addTwo()` (empty paranthesis).
 
-* **Scope**:
+#### Scope:
   * Every time you call a function, it has its own scope. Other things cannot peek into it, it has its own lil workspace to hangout in. Once the function is done, any var you have not explicitly held on to is gone!
   * Stuff from the global scope can be used within functions/anywhere else in the file. Generally, you do not want many things at the global scope.
   * Note: this also applies to functions within functions, though that is something you generally do not want to do.
   * `Reference Error` is the big indicator of scope errors.
 
-* **Built-Ins**:
+#### Built-Ins:
 ```js
 const sentence = "sPoNgEbOb CaSiNg";
 console.log(sentence.toLowerCase());
@@ -443,7 +445,7 @@ const name = "Max Z"
 console.log(name.substr(2,4)); // substr(indexToStart, howManyCharsToInclude)
 ```
 
-* **Objects and Arrays**:
+#### Objects and Arrays:
   * So far we've only really talked about having one piece of data/one variable at a time: a first name, a number, etc...
   * Objects and Arrays are collections of data, not just one piece.
 ```js
@@ -477,7 +479,7 @@ const dog = {
 dog.speak();
 ```
 
-* **Context**:
+#### Context:
   * As a program progresses through JS code, there exists a context of its location that can be referenced via the 'this' keyword.
 ```js
 const pii = {
@@ -508,7 +510,7 @@ getAddress(street, apartment, city) {
 }
 ```
 
-* **Arrays**:
+#### Arrays:
   * Ordered/indexed collections of data. `const array1 = ["zero","one","two"]`.
     * `console.log(array1[0])` => 'zero'
   * Arrays also have a bunch of builtin's, like: `.length`, `.join(" | ")`, etc...
@@ -550,7 +552,7 @@ cities.forEach(function(city) { // city is a parameter of cities.
 })
 ```
 
-* **Document Object Model (the DOM)**:
+#### Document Object Model (the DOM):
   * The DOM is how javascript interacts with html and css.
   * Websites generally follow the order of operations below:
     * Write code and put it on a server somewhere.
