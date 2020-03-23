@@ -465,7 +465,7 @@ console.log(person.name);
 console.log(person["name"]); // same as above.
 console.log(person.address.street);
 ```
-  * Objects can also have theur own functions:
+  * Objects can also have their own functions:
 ```js
 const dog = {
   name: "dog",
@@ -475,4 +475,77 @@ const dog = {
 }
 
 dog.speak();
+```
+
+* **Context**:
+  * As a program progresses through JS code, there exists a context of its location that can be referenced via the 'this' keyword.
+```js
+const pii = {
+  name: "Max",
+  hometown: "Munich",
+  country: "DE",
+  isLearning: true,
+  coursesCompleted: 6,
+  address: { 
+    street: "420 Handsome Ln",
+    apartment: "23",
+    city: "gvl"
+  },
+  getAddress() {
+    return `${this.address.street}, Apt #: ${this.address.apartment}, ${this.address.city}`
+  }
+};
+```
+  * 'this' refers to whatever object it is on. The nearest object it is within. Not always true, but pretty close.
+  * window is the global scope. If at global scope, `this === window` too!
+    * In node, the scope is 'global', so `this === global`.
+    * Thus, `console.log(this.scrollY);` === `console.log(window.scrollY);`. 
+  * Try not to rely on context. The above example could instead be...
+```js
+getAddress(street, apartment, city) {
+  street = pii.address.street;
+  ...
+}
+```
+
+* **Arrays**:
+  * Ordered/indexed collections of data. `const array1 = ["zero","one","two"]`.
+    * `console.log(array1[0])` => 'zero'
+  * Arrays also have a bunch of builtin's, like: `.length`, `.join(" | ")`, etc...
+  * Okay so you have an array, how do you edit it? Add things, remove things, edit things, other stuff with things...
+```js
+// Add an element to the array after creation:
+// Use PUSH! Addes the element to the end of the array.
+const courses = [
+  { teacher: "Mark", course: "Physics 101" },
+  { teacher: "Carrie", course: "Linear Algebra II"}
+];
+courses.push({ teacher: "Max", course: "Learning how to Learn" });
+console.log(courses);
+
+// what if you want it to go at the beginning of the array?
+courses.unshift({ teacher: "milo", course: "Naps 302" }); // not really used ever.
+
+// edit objects?
+const caresCourse = courses[1];
+caresCourse.course = "Linear Algebra III";
+```
+  * How to list everything in an array:
+    * there are a couple methods...
+```js
+const cities = [
+  "Greenville",
+  "Spartanburg",
+  "Charlotte"
+];
+
+// method 1 - a function on an object
+for (let i = 0; i < cities.length; i++ ) {
+  console.log(cities[i]);
+}
+
+// method 2
+cities.forEach(function(city) { // city is a parameter of cities.
+  console.log(city);
+})
 ```
