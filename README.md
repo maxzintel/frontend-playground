@@ -421,3 +421,58 @@ console.log(greet("Macks","Zin","Dowager Count","Aloha"))
   * Stuff from the global scope can be used within functions/anywhere else in the file. Generally, you do not want many things at the global scope.
   * Note: this also applies to functions within functions, though that is something you generally do not want to do.
   * `Reference Error` is the big indicator of scope errors.
+
+* **Built-Ins**:
+```js
+const sentence = "sPoNgEbOb CaSiNg";
+console.log(sentence.toLowerCase());
+```
+  * The above is one example of a built-in js function.
+  * Find this stuff at the `MDN` - Mozilla Dev Network.
+    * https://developer.mozilla.org/en-US/docs/Web/JavaScript
+    * Alternatively, `"blah".` will show possible built-ins.
+  * Other examples:
+```js
+Math.round(5.1);
+Math.floor(5.5);
+Math.ceil(6.1);
+// Does a bunch of trig and other mathematical functions as well.
+```
+```js
+const name = "Max Z"
+console.log(name.substr(2,4)); // substr(indexToStart, howManyCharsToInclude)
+```
+
+* **Objects and Arrays**:
+  * So far we've only really talked about having one piece of data/one variable at a time: a first name, a number, etc...
+  * Objects and Arrays are collections of data, not just one piece.
+```js
+const pii = { // Object start.
+  name: "Max", // each of these items are combinations of KEYS and VALUES.
+  hometown: "Munich",
+  country: "DE",
+  isLearning: true,
+  coursesCompleted: 6,
+  address: { // you can have objects within objects!
+    street: "420 Handsome Ln",
+    apartment: "23",
+    city: "gvl"
+  }
+};
+
+console.log(person);
+console.log(person.name);
+console.log(person["name"]); // same as above.
+console.log(person.address.street);
+```
+  * Objects can also have theur own functions:
+```js
+const dog = {
+  name: "dog",
+  speak() { // way to create a named fnc. = to 'speak: function() {...};'
+    console.log("bark woof");
+  }
+}
+
+dog.speak();
+```
