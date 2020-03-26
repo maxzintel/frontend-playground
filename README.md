@@ -602,3 +602,51 @@ cities.forEach(function(city) { // city is a parameter of cities.
   }
 </script>
 ```
+
+#### Events and Listeners:
+* Websites are meant to be reactive to users. In order to provide this reactivity, we need to wait for them to do stuff.
+  * Clicking buttons, typing inputs, etc...
+  * In other words, we are waiting for events to happen!
+```html
+<!-- Example! -->
+<button class="event-button">Click Me!</button>
+<script>
+  const button = document.querySelector('.event-button');
+  button.addEventListener('click', function () {
+    alert("Hey There!");
+  });
+</script>
+```
+* In the above example, we are waiting for someone to click the button. Once it is clicked, the subsequent code is run.
+* Also known as a **callback** => Basically still just a function.
+```html
+<!-- Example! -->
+<input placeholder="type here pls" class="input-to-copy"/>
+<p class="p-to-copy-to">Nothing happened yet</p>
+<script>
+  const input = document.querySelector('.input-to-copy');
+  const paragraph = document.querySelector('.p-to-copy-to');
+  input.addEventListener('keyup', function () {
+    paragraph.innerText = input.value;
+  });
+</script>
+```
+* Common events: keyup, change, click
+* **Event Delegation**
+  * Event Bubbling - used for listening on many elements/events. When the event fires on an element, the event bubbles up to its parent, and continues bubbling up until its at the root element we added the listener to. This allows us to listen for events on many similar elements at once without adding listeners to each one individually.
+```html
+<!-- Example! -->
+<div class="button-container">
+  <button>1</button>
+  <button>2</button>
+  <button>3</button>
+  <button>4</button>
+  <button>5</button>
+</div>
+<script>
+  document.querySelector('.button-container').addEventListener('click', function(event) {
+    alert(`You clicked button number ${event.target.innerText}`);
+  });
+</script>
+```
+* Above, we call upon the `event` parameter. `event` is always present. An event listener's first parameter is always an event object, which contains a bunch of information about the event. We, however, are mostly interested in the `event.target` bit of the object. `target` is just the html tag that the event originated from => here, the button that caused the event.
