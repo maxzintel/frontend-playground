@@ -91,7 +91,7 @@ h1 {
 * `red` = a **value**. A value that css understands. In this case, it would also understand hex and rgb values.
 * `px` = literal value. `em` is also a measure of size, but it is the relative size based on font. Useful when you may change fonts.
 
-*  **The Cascade:**
+#### **The Cascade:**
   * The Cascade settles potential conflicts between CSS Rules. Maybe you want different paragraphs to be different colors, for example. But setting `p {...}` wouldn't do that because it applies the rules within to all paragraph elements.
   * Classes!
 ```css
