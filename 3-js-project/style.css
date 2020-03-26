@@ -1,0 +1,50 @@
+body {
+  background: darkslategrey;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+  border-bottom: 1px solid black;
+}
+
+.result {
+  background: #263238; 
+  color: antiquewhite;
+  width: 100%;
+  text-align: right;
+  padding: 20px 20px;
+}
+
+.button {
+  text-align: center;
+  padding: 20px 20px;
+  border: none;
+  text-decoration: none;
+}
+
+.num-button {
+  background-color: darkgray;
+  border-right: 1px solid black;
+}
+
+.op-button {
+  background-color: firebrick;
+}
+
+.quarter {
+  width: 25%;
+}
+
+.half {
+  width: 50%;
+}
+
+.three-quarter {
+  width: 75%;
+}
+
+* {
+  box-sizing: border-box;
+}
