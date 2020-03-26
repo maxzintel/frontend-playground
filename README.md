@@ -644,7 +644,7 @@ cities.forEach(function(city) { // city is a parameter of cities.
   <button>5</button>
 </div>
 <script>
-  document.querySelector('.button-container').addEventListener('click', function(event) {
+  document.querySelector('.button-container').addEventListener('click', (event) => {
     alert(`You clicked button number ${event.target.innerText}`);
   });
 </script>
