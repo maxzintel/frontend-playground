@@ -3,10 +3,14 @@ let button = document.querySelectorAll('.button');
 let prevOp;
 const zero = "0";
 
+function handleInput(input) {
+  result.innerText += input.target.innerText;
+}; 
+
 function init() {
   button.forEach( (element) => {
     element.addEventListener("click", (event) => {
-      result.innerText = event.target.innerText;
+      handleInput(event);
     });
   });
 };
