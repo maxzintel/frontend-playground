@@ -661,3 +661,4 @@ cities.forEach(function(city) { // city is a parameter of cities.
 * API = Application Programming Interface. Everyone forgets what it means. Basically, in this context, its a public server/container that will allow us to make AJAX calls to it to get some data back. Most big websites have API's. Clicking refresh on GMAIL makes an AJAX request to the server handling your mail.
 * Ex: use the api via dog.ceo to grab random pictures of dogs. 
   * Add to `~/4-doggos/`.
+* The AJAX request to the dogs api will return a JSON object with the response status and the image source.
