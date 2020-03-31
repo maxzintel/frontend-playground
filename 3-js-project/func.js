@@ -1,10 +1,19 @@
 let result = document.querySelector('.result');
 let button = document.querySelectorAll('.button');
-let prevOp;
-const zero = "0";
+let runningEquation = "0";
 
 function handleInput(input) {
-  result.innerText += input.target.innerText;
+  if(result.innerText === "0" && runningEquation === "0") {
+    result.innerText = input.target.innerText;
+    runningEquation = input.target.innerText;
+    console.log(runningEquation);
+  } else if(result.innerText === "0" && runningEquation != "0") {
+    result.innerText = input.target.innerText;
+    runningEquation += input.target.innerText;
+    console.log(runningEquation);
+  } else {
+    handleSymbol(input.target.innerText);
+  };
 }; 
 
 function init() {
@@ -18,16 +27,21 @@ function init() {
 function handleSymbol(val) {
   switch(val) {
     case "C":
-      //code
+      result.innerText = "0";
+      runningEquation = "0"
       break;
     case "+":
     case "-":
     case "÷":
     case "×":
-      //code
+      result.innerText = "0";
+      runningEquation += val;
+      console.log(runningEquation)
       break;
     case "=":
       //code
+      break;
+    default: // input is a number. 
       break;
   };
 };
