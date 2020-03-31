@@ -50,6 +50,8 @@ function handleSymbol(val) {
       eqNew("0");
       break;
     case "DEL": // Not working yet.
+      eqNew(runningEquation.substring(0, runningEquation.length - 1));
+      resNew(result.innerText.substring(0, result.innerText.length - 1));
       break;
     case "÷":
       resNew("0");
