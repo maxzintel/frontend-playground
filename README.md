@@ -650,3 +650,14 @@ cities.forEach(function(city) { // city is a parameter of cities.
 </script>
 ```
 * Above, we call upon the `event` parameter. `event` is always present. An event listener's first parameter is always an event object, which contains a bunch of information about the event. We, however, are mostly interested in the `event.target` bit of the object. `target` is just the html tag that the event originated from => here, the button that caused the event.
+
+## Ajax
+#### Background
+* Stupid acronym meaning 'async javascript and xml', kinda. This is what it used to be, but since it has become something that is not what its name implies. Now, it stands for what we do when a website requests more info from a server after the page has loaded.
+* XML is no longer something we use with JS
+  * We use JSON now instead.
+* OK, so lets actually use AJAX for something now...
+#### Requesting Data from an API
+* API = Application Programming Interface. Everyone forgets what it means. Basically, in this context, its a public server/container that will allow us to make AJAX calls to it to get some data back. Most big websites have API's. Clicking refresh on GMAIL makes an AJAX request to the server handling your mail.
+* Ex: use the api via dog.ceo to grab random pictures of dogs. 
+  * Add to `~/4-doggos/`.
