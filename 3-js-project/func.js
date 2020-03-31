@@ -30,6 +30,8 @@ function handleSymbol(val) {
       result.innerText = "0";
       runningEquation = "0"
       break;
+    case "DEL": // Not working yet.
+      break;
     case "+":
     case "-":
     case "÷":
@@ -38,10 +40,14 @@ function handleSymbol(val) {
       runningEquation += val;
       console.log(runningEquation)
       break;
-    case "=":
-      //code
+    case "=": // Don't use eval.
+      result.innerText = Function('return ' + runningEquation)();
+      runningEquation = result.innerText;
+      console.log(runningEquation);
       break;
-    default: // input is a number. 
+    default: // input is an additional digit to last number.
+      result.innerText += val;
+      runningEquation += val;
       break;
   };
 };
