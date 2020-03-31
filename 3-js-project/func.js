@@ -7,32 +7,32 @@ let runningEquation = "0";
 // ... the result and runningEq.
 function resNew(input) {
   result.innerText = input;
-}
+};
 
 function eqNew(input) {
   runningEquation = input;
-}
+};
 
 function eqUsed(input) {
   runningEquation += input;
-}
+};
 
 function resAfterNum(input) {
   result.innerText += input;
-}
+};
+ 
+function killOffLeadingZero() {
+  if(result.innerText === "0" && runningEquation === "0") {
+    resNew("");
+    eqNew("");
+  } else if(result.innerText === "0") {
+    resNew("");
+  };
+};
 
 function handleInput(input) {
-  if(result.innerText === "0" && runningEquation === "0") {
-    resNew(input.target.innerText);
-    eqNew(input.target.innerText);
-    console.log(runningEquation);
-  } else if(result.innerText === "0" && runningEquation != "0") {
-    resNew(input.target.innerText);
-    eqUsed(input.target.innerText);
-    console.log(runningEquation);
-  } else {
-    handleSymbol(input.target.innerText);
-  };
+  killOffLeadingZero();
+  handleSymbol(input.target.innerText);
 }; 
 
 function init() {
