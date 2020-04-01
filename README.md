@@ -667,3 +667,10 @@ cities.forEach(function(city) { // city is a parameter of cities.
 ## Integrating with other Libraries!
 * Integrating with other freely made, open-source libraries is one of the most important things we can do as javascript devs.
 * Ex: popmotion - an 11.5kb (maximum) swiss army knife for animators and interaction devs. Let's integrate with it!
+  * Example added in `~/5-popmotion/`
+
+## Building your Code with Node.js
+* Install Node.js and install parcel using `npm install parcel-bundler`. Do this with `~/5-popmotion/`.
+* `npm init -y` to create barebones package.json
+* `npm install popmotion` to install popmotion.
+* `npm info cats` to see whats in an npm package.
