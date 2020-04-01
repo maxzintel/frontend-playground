@@ -662,3 +662,8 @@ cities.forEach(function(city) { // city is a parameter of cities.
 * Ex: use the api via dog.ceo to grab random pictures of dogs. 
   * Add to `~/4-doggos/`.
 * The AJAX request to the dogs api will return a JSON object with the response status and the image source.
+* Note: A nice feature would be to add a loading gif. Use an `<img>` tag that shows when you're loading a new dog and hide it when you're done.
+
+## Integrating with other Libraries!
+* Integrating with other freely made, open-source libraries is one of the most important things we can do as javascript devs.
+* Ex: popmotion - an 11.5kb (maximum) swiss army knife for animators and interaction devs. Let's integrate with it!
