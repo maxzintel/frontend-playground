@@ -649,7 +649,8 @@ cities.forEach(function(city) { // city is a parameter of cities.
   });
 </script>
 ```
-* Above, we call upon the `event` parameter. `event` is always present. An event listener's first parameter is always an event object, which contains a bunch of information about the event. We, however, are mostly interested in the `event.target` bit of the object. `target` is just the html tag that the event originated from => here, the button that caused the event.
+* Above, we call upon the `event` parameter. `event` is always present. 7c?ca
+p=`1An event listener's first parameter is always an event object, which contains a bunch of information about the event. We, however, are mostly interested in the `event.target` bit of the object. `target` is just the html tag that the event originated from => here, the button that caused the event.
 
 ## Ajax
 #### Background
@@ -674,7 +675,7 @@ cities.forEach(function(city) { // city is a parameter of cities.
 * `npm init -y` to create barebones package.json
 * `npm install popmotion` to install popmotion.
 * `npm info cats` to see whats in an npm package.
-* `parcel index.html` to build and run code locally.
+* `parcel index.html` to build and run code locally. Kill it with `CTRL + c`.
   * Bundles everything up, including referenced files, and runs a live local server. Updates automatically (hot model refresh, or something like that).
   * Can require in other js files in the existing one. Ex:
 ```js useless.js
@@ -685,3 +686,8 @@ require('./useless');
 ```
 And you will now see this console.log in the live server.
 * Do modules with ES6 instead...
+
+## Final Thoughts...
+* Really, just know the vocabulary to google things. That's most of it.
+* Compete against yourself, as in all things.
+* Embrace the cycle of feeling like an idiot and feeling like a genius.
