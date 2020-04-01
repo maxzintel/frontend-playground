@@ -674,3 +674,14 @@ cities.forEach(function(city) { // city is a parameter of cities.
 * `npm init -y` to create barebones package.json
 * `npm install popmotion` to install popmotion.
 * `npm info cats` to see whats in an npm package.
+* `parcel index.html` to build and run code locally.
+  * Bundles everything up, including referenced files, and runs a live local server. Updates automatically (hot model refresh, or something like that).
+  * Can require in other js files in the existing one. Ex:
+```js useless.js
+console.log("A useless log");
+```
+``` js animation.js
+require('./useless');
+```
+And you will now see this console.log in the live server.
+* Do modules with ES6 instead...

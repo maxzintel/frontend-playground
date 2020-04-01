@@ -1,0 +1,16 @@
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: dodgerblue;
+  border-radius: 50%; /* Makes the shape a sphere. */
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 400px;
+}
+
+/*# sourceMappingURL=/animation.2a95f036.css.map */

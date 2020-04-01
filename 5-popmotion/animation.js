@@ -1,4 +1,4 @@
-const popmotion = require('popmotion'); // I need this library, go pull it in for me so I can use it.
+import popmotion from 'popmotion'; // I need this library, go pull it in for me so I can use it.
 
 const { styler, spring, listen, pointer, value } = popmotion;
 // Above is equivalent to... const styler = window.popmotion.styler;... over and over for each thing in popmotion.
